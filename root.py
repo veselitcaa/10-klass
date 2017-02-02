@@ -4,12 +4,14 @@
 
 
 import time
-
-a = int(input("Введите ваше число: "))
-
-b = a ** 0.5
-
-print('Квадратный корень числа', a, 'равен', b)
-
-
-time.sleep(5) #Задержка после выполнения программы
+while True:
+    number = input("Введите ваше число: ")
+    try:
+        a = int(number)
+    except ValueError as error1:
+        print('Ошибка! повторите ввод. Исключение:, error1')
+        continue
+    b = a ** 0.5
+    print('Квадратный корень числа', a, 'равен', b)
+    time.sleep(5) #Задержка после выполнения программы
+    break
